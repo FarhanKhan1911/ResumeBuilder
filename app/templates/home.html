@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Resume Maker{% endblock title %}
+
+{% block content %}
+
+<div class="container-fluid " >
+    <div class="row bg-dark bg-dark ">
+        <div class="container">
+            <div class="first">
+                <h1 class="head text-center "> Create Your Professional Resume Online With <br> Resume  Maker</h1> 
+                <h6 class="head text-center">Create your very own professional CV and download it within 15 minutes.</h6>
+                {% if user.is_authenticated %}
+                <a name="" id="" class="btn btn-primary  btn1" href=" {% url 'index' %} " role="button"><strong>Create your CV </strong></a>
+                {% else %}
+                <a name="" id="" class="btn btn-primary  btn1" href=" {% url 'signIn' %} " role="button"><strong>Create your CV </strong></a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+{% endblock content %}
